@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Hussnain Tanveer — Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="scroll-line" id="scrollLine"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  
+  <!-- ══════════════════════════════
+       NAVIGATION
+  ══════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Hussnain<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="admin.html" class="btn btn-ghost admin-login-btn" id="adminBtn" style="font-size:0.72rem;padding:0.5rem 1rem;text-decoration:none;">🔐 Admin</a>
+      <a href="#contact" class="btn btn-primary" style="font-size:0.72rem;padding:0.5rem 1.2rem;">Hire Me</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-3d" id="hero3d"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for work</div>
+      <h1>
+        Building<br>
+        <span class="line2">Digital</span>
+        <span class="stroke"> Solutions</span>
+      </h1>
+      <p class="hero-desc">
+        Software Engineer specializing in full-stack web development and AI-based systems.
+        Passionate about building scalable, efficient, and user-friendly applications.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk →</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">10+</div><div class="stat-label">Projects Done</div></div>
+        <div><div class="stat-num">2+</div><div class="stat-label">Years Exp.</div></div>
+        <div><div class="stat-num">5+</div><div class="stat-label">Clients</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ABOUT
+  ══════════════════════════════ -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">01 /</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar-wrap">
+        <div class="avatar-box">
+          <div class="avatar-corner tl"></div>
+          <div class="avatar-corner br"></div>
+          <img src="images/img2.png" alt="Profile Photo" class="avatar-img" />
+          <div class="avatar-float">Engineer</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>Hi, I'm Muhammad Hussnain Tanveer 👋</h3>
+        <p>I'm a passionate Software Engineer with strong expertise in web development and AI-based applications. I focus on building clean, efficient, and scalable digital solutions.</p>
+        <p>I have experience in both frontend and backend technologies, enabling me to develop complete full-stack applications.</p>
+        <p>Currently, I am working on innovative projects like SignTalk — an AI-based sign language recognition system.</p>
+        <div class="about-tags">
+          <span class="tag">Problem Solver</span>
+          <span class="tag">AI Enthusiast</span>
+          <span class="tag">Clean Code</span>
+          <span class="tag">Full Stack</span>
+          <span class="tag">Team Player</span>
+          <span class="tag">Continuous Learner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SKILLS
+  ══════════════════════════════ -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02 /</span>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <!-- ══════════════════════════════
+       HOBBIES
+  ══════════════════════════════ -->
+  <section id="hobbies">
+    <div class="section-header">
+      <span class="section-num">03 /</span>
+      <h2 class="section-title">Hobbies</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="hobbies-intro">Beyond the code editor, here's what keeps me energized, inspired, and balanced in life.</p>
+    <div class="hobbies-grid" id="hobbiesGrid"></div>
+  </section>
+
+  <!-- ══════════════════════════════
+       PROJECTS
+  ══════════════════════════════ -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">04 /</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CONTACT
+  ══════════════════════════════ -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05 /</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Let's build something great together.</h3>
+        <p>Feel free to contact me for projects, collaboration, or opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:hussnainofficial.co@email.com" class="contact-link">
+            <div class="contact-link-icon">✉</div>hussnainofficial.co@email.com
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-link-icon">in</div>linkedin.com/in/hussnain
+          </a>
+          <a href="#" class="contact-link">
+            <div class="contact-link-icon">⌥</div>github.com/hussnain
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group"><label>Your Name</label><input type="text" id="fname" placeholder="Your Name" /></div>
+        <div class="form-group"><label>Email Address</label><input type="email" id="femail" placeholder="Your Email" /></div>
+        <div class="form-group"><label>Message</label><textarea id="fmessage" placeholder="Your Message"></textarea></div>
+        <div class="form-msg" id="formMsg"></div>
+        <button class="btn btn-primary" onclick="submitForm()" style="align-self:flex-start">Send Message →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed &amp; Built with ♥ by <span>Muhammad Hussnain Tanveer</span> · 2026</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+  <script src="animations-3d.js"></script>
+</body>
+</html>
