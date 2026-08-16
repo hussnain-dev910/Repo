@@ -31,6 +31,16 @@
       <a href="admin.html" class="btn btn-ghost admin-login-btn" id="adminBtn" style="font-size:0.72rem;padding:0.5rem 1rem;text-decoration:none;">🔐 Admin</a>
       <a href="#contact" class="btn btn-primary" style="font-size:0.72rem;padding:0.5rem 1.2rem;">Hire Me</a>
     </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html">🔐 Admin</a>
+    </div>
   </nav>
 
   <!-- ══════════════════════════════
@@ -149,8 +159,8 @@
         <h3>Let's build something great together.</h3>
         <p>Feel free to contact me for projects, collaboration, or opportunities.</p>
         <div class="contact-links">
-          <a href="mailto:hussnainofficial.co@email.com" class="contact-link">
-            <div class="contact-link-icon">✉</div>hussnainofficial.co@email.com
+          <a href="mailto:hussnain@email.com" class="contact-link">
+            <div class="contact-link-icon">✉</div>hussnain@email.com
           </a>
           <a href="#" class="contact-link">
             <div class="contact-link-icon">in</div>linkedin.com/in/hussnain
@@ -177,5 +187,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
   <script src="animations-3d.js"></script>
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileMenuBtn && mobileNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        mobileMenuBtn.setAttribute('aria-expanded', open);
+        mobileMenuBtn.textContent = open ? '✕' : '☰';
+      });
+      mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.textContent = '☰';
+      }));
+    }
+  </script>
 </body>
 </html>
