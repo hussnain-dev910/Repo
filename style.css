@@ -795,3 +795,138 @@ footer span { color: var(--accent); }
   display: inline-block;
   animation: floatY 4s ease-in-out infinite;
 }
+
+
+/* ══════════════════════════════════════════
+   MOBILE / TABLET RESPONSIVE POLISH
+   ══════════════════════════════════════════ */
+.mobile-menu-btn,
+.mobile-nav { display: none; }
+
+@media (max-width: 1000px) {
+  nav { padding-left: 2rem; padding-right: 2rem; }
+  .nav-links { gap: 1.1rem; }
+  .nav-right { gap: 0.5rem; }
+  section, #hero { padding-left: 2.5rem; padding-right: 2.5rem; }
+  .about-grid { gap: 2.5rem; }
+  .contact-wrap { gap: 2.5rem; }
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0.85rem 1rem;
+    min-height: 64px;
+  }
+  .nav-links { display: none; }
+  .nav-right { margin-left: auto; }
+  .admin-login-btn { display: none; }
+  .nav-right .btn-primary { padding: 0.5rem 0.8rem !important; }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-left: 0.5rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--accent);
+    font: inherit;
+    font-size: 1.15rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .mobile-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1rem 1rem;
+    background: rgba(8,11,16,0.98);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .mobile-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid rgba(30,45,69,0.55);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mobile-nav a:last-child { border-bottom: 0; }
+  .mobile-nav a:hover { color: var(--accent); }
+
+  section, #hero { padding: 5rem 1.25rem 4rem; }
+  #hero { min-height: 100svh; padding-top: 7rem; }
+  .hero-content { max-width: 100%; }
+  h1 { font-size: clamp(2.55rem, 12vw, 4rem); line-height: 0.98; word-break: normal; }
+  .hero-desc { font-size: 0.84rem; max-width: 100%; }
+  .hero-btns { gap: 0.7rem; }
+  .hero-btns .btn { flex: 1 1 140px; text-align: center; padding-left: 1rem; padding-right: 1rem; }
+  .hero-stats { gap: 1.2rem; margin-top: 2.5rem; padding-top: 1.5rem; justify-content: space-between; }
+  .stat-num { font-size: 1.55rem; }
+  .stat-label { font-size: 0.58rem; }
+
+  .section-header { gap: 0.65rem; margin-bottom: 2.2rem; }
+  .section-title { font-size: clamp(1.55rem, 7vw, 2.2rem); }
+  .section-line { margin-left: 0.25rem; }
+
+  .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: 2.25rem; }
+  .avatar-box { width: min(280px, 78vw); height: min(320px, 88vw); }
+  .about-text h3 { font-size: 1.25rem; }
+  .about-text p { font-size: 0.82rem; }
+
+  .skills-grid,
+  .projects-grid,
+  .hobbies-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .skill-card, .project-body, .hobby-card { padding: 1.25rem; }
+  .project-thumb { height: 155px; }
+
+  .hobby-card { flex-direction: row; gap: 1rem; }
+  .hobby-icon-wrap { width: 46px; height: 46px; font-size: 1.25rem; }
+
+  .contact-info h3 { font-size: 1.5rem; }
+  .contact-link { font-size: 0.75rem; overflow-wrap: anywhere; }
+  .contact-form .btn { width: 100%; }
+  footer { padding: 1.5rem 1rem; font-size: 0.62rem; }
+}
+
+@media (max-width: 420px) {
+  nav { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .nav-logo { font-size: 1.05rem; }
+  .nav-right .btn-primary { display: none; }
+  section, #hero { padding-left: 1rem; padding-right: 1rem; }
+  .hero-tag { font-size: 0.62rem; }
+  h1 { font-size: clamp(2.35rem, 13vw, 3.2rem); }
+  .hero-btns { flex-direction: column; }
+  .hero-btns .btn { width: 100%; }
+  .hero-stats { gap: 0.7rem; }
+  .stat-num { font-size: 1.35rem; }
+  .stat-label { font-size: 0.52rem; letter-spacing: 0.04em; }
+  .section-header { align-items: center; }
+  .section-num { font-size: 0.6rem; }
+  .section-line { min-width: 20px; }
+  .hobby-card { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
